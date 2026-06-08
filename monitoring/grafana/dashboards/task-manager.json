@@ -1,0 +1,46 @@
+{
+  "title": "Task Manager Dashboard",
+  "uid": "task-manager",
+  "version": 1,
+  "panels": [
+    {
+      "title": "HTTP Request Rate",
+      "type": "graph",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+      "targets": [
+        {
+          "expr": "rate(http_requests_total[5m])",
+          "legendFormat": "{{method}} {{route}}"
+        }
+      ]
+    },
+    {
+      "title": "Request Duration",
+      "type": "heatmap",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+      "targets": [
+        {
+          "expr": "http_request_duration_seconds_bucket",
+          "format": "heatmap"
+        }
+      ]
+    },
+    {
+      "title": "Tasks Created / Completed",
+      "type": "graph",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+      "targets": [
+        { "expr": "rate(tasks_created_total[5m])", "legendFormat": "Created" },
+        { "expr": "rate(tasks_completed_total[5m])", "legendFormat": "Completed" }
+      ]
+    },
+    {
+      "title": "Active Users",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 4, "x": 0, "y": 16 },
+      "targets": [{ "expr": "active_users_total" }]
+    }
+  ],
+  "tags": ["task-manager", "prometheus"],
+  "schemaVersion": 38
+}

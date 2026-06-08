@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Build
+dist/
+*/dist/
+build/
+*/build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Data
+postgres_data/
+redis_data/
+grafana_data/
+prometheus_data/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+*/coverage/
+
+# Prisma
+*/prisma/migrations/
