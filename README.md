@@ -187,59 +187,7 @@ task-management-system/
 
 ---
 
-## 🗺 Implementation Roadmap
 
-### Checkpoint 1: Foundation (Week 1-2)
-**Goal**: Skeleton project running end-to-end
-
-- [x] Project structure & Docker Compose
-- [ ] PostgreSQL + Prisma schema + seed data
-- [ ] Express server with health endpoint
-- [ ] React + Vite scaffold with routing
-- [ ] Basic Login page + Keycloak setup
-- [ ] Simple task list page (read-only)
-
-**Deliverable**: `docker compose up` starts everything, can see login page and task list.
-
-### Checkpoint 2: Core Features (Week 3-4)
-**Goal**: Full CRUD + Auth
-
-- [ ] Full task CRUD (create, read, update, delete)
-- [ ] Keycloak integration (login/logout/token refresh)
-- [ ] User management + RBAC middleware
-- [ ] Task filtering + search + pagination
-- [ ] Zustand auth store + TanStack Query integration
-- [ ] Protected routes + role-based UI
-
-**Deliverable**: Users can log in, manage tasks, roles are enforced.
-
-### Checkpoint 3: Advanced Features (Week 5-6)
-**Goal**: Real-time + Performance
-
-- [ ] Redis caching for task queries
-- [ ] WebSocket (Socket.IO) for real-time updates
-- [ ] Comments system on tasks
-- [ ] Prometheus metrics (request count, duration)
-- [ ] Grafana dashboard
-- [ ] Global error handling (backend + frontend toast)
-
-**Deliverable**: Real-time updates when tasks change, metrics visible in Grafana.
-
-### Checkpoint 4: Polish & Deployment (Week 7-8)
-**Goal**: Production-ready
-
-- [ ] Backend tests (unit + integration)
-- [ ] Frontend tests (component tests)
-- [ ] CI/CD scripts
-- [ ] Nginx production config
-- [ ] Performance optimization
-- [ ] Documentation + demo video
-
-**Deliverable**: Complete project with CI/CD, tests, and deployment ready.
-
----
-
-## 🚨 Error Handling Strategy
 
 ### Backend Global Error Handler
 
